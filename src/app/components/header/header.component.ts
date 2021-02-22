@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NbSidebarService } from '@nebular/theme';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +6,10 @@ import { NbSidebarService } from '@nebular/theme';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private readonly sidebarService: NbSidebarService) {}
+  constructor() {}
   ngOnInit(): void {}
 
   toggleSidebar() {
-    this.sidebarService.toggle();
+    // this.sidebarService.toggle();
   }
 }

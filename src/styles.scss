@@ -1,11 +1,3 @@
-@import "themes";
-
-@import "~@nebular/theme/styles/globals";
-
 @import "./app/components/header/header.component";
 @import "./app/components/sidebar/sidebar.component";
-
-@include nb-install() {
-  @include nb-theme-global();
-}
-/* You can add global styles to this file, and also import other style files */
+@import "./app/components/dashboard/dashboard-table/dashboard-table.component";

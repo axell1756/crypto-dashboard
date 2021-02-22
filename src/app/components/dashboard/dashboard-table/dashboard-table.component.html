@@ -1,0 +1,21 @@
+<!-- <nb-card>
+  <nb-card-body> -->
+<table class="container">
+  <thead>
+    <tr>
+      <th *ngFor="let column of allColumns">
+        <h1>{{ column }}</h1>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let coin of data">
+      <td>{{ coin.name }}</td>
+      <td>{{ coin.market_caps[1][1] }}</td>
+      <td>{{ coin.prices[1][1] }}</td>
+      <td>{{ coin.total_volumes[1][1] }}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- </nb-card-body>
+</nb-card> -->

@@ -1,15 +1,9 @@
-<nb-layout>
-  <nb-layout-header fixed>
-    <app-header></app-header>
-  </nb-layout-header>
+<app-header></app-header>
 
-  <nb-sidebar class="menu-sidebar" responsive start>
-    <app-sidebar></app-sidebar>
-  </nb-sidebar>
+<div class="menu-sidebar" responsive>
+  <app-sidebar></app-sidebar>
+</div>
 
-  <nb-layout-column>
-    <router-outlet></router-outlet>
-  </nb-layout-column>
+<router-outlet></router-outlet>
 
-  <nb-layout-footer fixed> </nb-layout-footer>
-</nb-layout>
+<footer></footer>

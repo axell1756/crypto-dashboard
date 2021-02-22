@@ -1,23 +1,6 @@
-@import "../../../themes";
-
 .logo-container {
   display: flex;
   align-items: center;
-  width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
-}
-
-nb-action {
-  height: auto;
-  display: flex;
-  align-content: center;
-}
-
-nb-user {
-  cursor: pointer;
-}
-
-::ng-deep nb-search button {
-  padding: 0 !important;
 }
 
 .header-container {
@@ -26,10 +9,7 @@ nb-user {
   width: auto;
 
   .sidebar-toggle {
-    @include nb-ltr(padding-right, 1.25rem);
-    @include nb-rtl(padding-left, 1.25rem);
     text-decoration: none;
-    color: nb-theme(text-hint-color);
     nb-icon {
       font-size: 1.75rem;
     }
@@ -38,8 +18,6 @@ nb-user {
   .logo {
     padding: 0 1.25rem;
     font-size: 1.75rem;
-    @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
-    @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
     white-space: nowrap;
     text-decoration: none;
   }
