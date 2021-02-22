@@ -1,3 +1,6 @@
 @import "./app/components/header/header.component";
 @import "./app/components/sidebar/sidebar.component";
 @import "./app/components/dashboard/dashboard-table/dashboard-table.component";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
