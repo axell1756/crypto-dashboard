@@ -1,0 +1,66 @@
+<mat-spinner *ngIf="isLoading | async"></mat-spinner>
+<table
+  mat-table
+  [dataSource]="dataSource"
+  class="full-width-table"
+  matSort
+  matSortDirection="desc"
+>
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+    <td mat-cell *matCellDef="let coin">{{ coin.name }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th>
+    <td mat-cell *matCellDef="let coin">{{ coin.symbol }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="current_price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+    <td mat-cell *matCellDef="let coin">{{ coin.current_price }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="market_cap">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Market Cap</th>
+    <td mat-cell *matCellDef="let coin">{{ coin.market_cap }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="total_volume">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Total Volume</th>
+    <td mat-cell *matCellDef="let coin">{{ coin.total_volume }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="high_24h">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>High (24h)</th>
+    <td mat-cell *matCellDef="let coin">{{ coin.high_24h }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="low_24h">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Low (24h)</th>
+    <td mat-cell *matCellDef="let coin">{{ coin.low_24h }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="price_change_percentage_24h">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Price % (24h)</th>
+    <td mat-cell *matCellDef="let coin">
+      {{ coin.price_change_percentage_24h }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="market_cap_change_percentage_24h">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+      Market Cap % (24h)
+    </th>
+    <td mat-cell *matCellDef="let coin">
+      {{ coin.market_cap_change_percentage_24h }}
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
+</table>
+<mat-paginator [length]="resultsLength" [pageSize]="5"></mat-paginator>
